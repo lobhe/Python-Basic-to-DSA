@@ -16,26 +16,29 @@ elif
 Python expects the next lines to be indented (moved right by 4 spaces).
 
 Example 1: Function
+```
 def greet():
     print("Hello")
     print("Welcome")
-
+```
 Notice:
-
+```
 def greet():
 
 ends with :
-
+```
 So everything inside the function gets 4 spaces.
 
 Wrong
+```
 def greet():
 print("Hello")
-
+```
 Output:
 
 IndentationError
 Example 2: If Statement
+```
 age = 18
 
 if age >= 18:
@@ -60,12 +63,13 @@ if age >= 18:
 and
 
 else:
-
+```
 are at the same level.
 
 The code inside them has 4 spaces.
 
 Example 4: For Loop
+```
 for i in range(5):
     print(i)
 
@@ -73,7 +77,9 @@ Structure:
 
 for loop:
     code
+```
 Example 5: Function + Loop
+
 def print_numbers():
 
     for i in range(5):
