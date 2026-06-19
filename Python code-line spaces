@@ -1,13 +1,14 @@
 Think of Python Like a Building
 
 Every time you write a line ending with :
-
+```
 if
 for
 while
 def
 else
 elif
+```
 
 Python expects the next lines to be indented (moved right by 4 spaces).
 
