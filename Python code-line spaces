@@ -1,0 +1,180 @@
+Think of Python Like a Building
+
+Every time you write a line ending with :
+
+if
+for
+while
+def
+else
+elif
+
+Python expects the next lines to be indented (moved right by 4 spaces).
+
+Example 1: Function
+def greet():
+    print("Hello")
+    print("Welcome")
+
+Notice:
+
+def greet():
+
+ends with :
+
+So everything inside the function gets 4 spaces.
+
+Wrong
+def greet():
+print("Hello")
+
+Output:
+
+IndentationError
+Example 2: If Statement
+age = 18
+
+if age >= 18:
+    print("Adult")
+
+Structure:
+
+if condition:
+    code
+Example 3: If Else
+age = 16
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+Notice:
+
+if age >= 18:
+
+and
+
+else:
+
+are at the same level.
+
+The code inside them has 4 spaces.
+
+Example 4: For Loop
+for i in range(5):
+    print(i)
+
+Structure:
+
+for loop:
+    code
+Example 5: Function + Loop
+def print_numbers():
+
+    for i in range(5):
+        print(i)
+
+Count spaces:
+
+def print_numbers():      # Level 0
+
+    for i in range(5):    # Level 1 (4 spaces)
+
+        print(i)          # Level 2 (8 spaces)
+Visual Representation
+Level 0
+def test():
+
+    Level 1
+    for i in range(5):
+
+        Level 2
+        print(i)
+Your Prime Example
+def is_prime(n):
+
+    if n <= 1:
+        return False
+
+    for i in range(2, int(n ** 0.5) + 1):
+
+        if n % i == 0:
+            return False
+
+    return True
+
+Let's mark the levels:
+
+def is_prime(n):                  # Level 0
+
+    if n <= 1:                    # Level 1
+        return False              # Level 2
+
+    for i in range(...):          # Level 1
+
+        if n % i == 0:            # Level 2
+            return False          # Level 3
+
+    return True                   # Level 1
+Easy Rule
+
+Whenever you write a line ending with :
+
+if x > 0:
+
+Press Enter.
+
+VS Code automatically adds 4 spaces:
+
+if x > 0:
+    |
+
+Cursor appears here.
+
+Write your code.
+
+Beginner Template
+
+Most DSA questions follow this pattern:
+
+def function_name(parameter):
+
+    # Step 1
+
+    if condition:
+        return something
+
+    # Step 2
+
+    for item in something:
+
+        if another_condition:
+            return something
+
+    return answer
+
+
+print(function_name(value))
+Practice Exercise
+
+Try typing this exactly in VS Code:
+
+def check_even(n):
+
+    if n % 2 == 0:
+        return True
+
+    return False
+
+
+print(check_even(10))
+print(check_even(7))
+
+Before running it, look at the spaces and identify:
+
+Level 0 lines
+Level 1 lines
+Level 2 lines
+
+Once you're comfortable with indentation, reading and writing Python becomes much easier.
